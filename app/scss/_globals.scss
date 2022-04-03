@@ -1,0 +1,39 @@
+html {
+    box-sizing:border-box;
+}
+
+body {
+}
+
+*, *::before,*::after {
+    box-sizing:inherit;
+}
+
+a, a:visited, a:hover {
+    text-decoration: none;
+}
+
+ul {
+    list-style:none;
+}
+
+.flex {
+    
+    display:flex;
+
+    &-jc-sb {
+        justify-content: space-between;
+    }
+
+    &-jc-c {
+        justify-content: center;
+    }
+    
+    &-ai-c {
+        align-items: center;
+    }
+}
+
+
+
+
