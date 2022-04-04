@@ -10,23 +10,26 @@
 
 </head>
 <body>
-  <header>
-    <nav>
+  <header class="header">
+    <nav class="flex flex-jc-sb flex-ai-c">
       <a href="" class="header__logo">
         <img src="/images/logo.svg">
       </a>
-      <div class="header__hamburger">
+      <div class="header__hamburger hide-for-desktop">
         <span></span>
         <span></span>
         <span></span>
       </div>
-      <ul class="links">
+      <ul class="header__links flex hide-for-mobile">
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
         <li><a href="#">Blog</a></li>
         <li><a href="#">Careers</a></li>
       </ul>
+      <button type="button" class="header__cta hide-for-mobile">
+        Request Invite
+      </button>
     </nav>
   </header>
 
@@ -107,6 +110,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
-  <srcipt src="/app/script.js"></srcipt>
+  <script src="/app/script.js"></script>
 </body>
 </html>

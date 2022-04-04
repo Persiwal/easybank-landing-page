@@ -1,0 +1,54 @@
+.header {
+    nav {
+       padding: 1.5rem;
+    }
+    &__hamburger {
+        cursor:pointer;
+        
+        span {
+            display: block;
+            width: 1.5rem;
+            height: .125rem;
+            background-color: $dark-blue;
+            
+            &:not(:last-child) {
+                margin-bottom: .3125rem;
+            }
+        }
+
+    }
+    &__links {
+        li {
+            &:not(:last-child) {
+            margin-right:2rem;
+            }
+            &:hover {
+
+                &::after {
+                   position:relative;
+                   top:32px;
+                    content: "";
+                    display: block;
+                    width: inherit;
+                    height: .25rem;
+                    background: linear-gradient(to right, $lime-green,$grayish-blue);
+                }
+            }
+        }
+    }
+    &__cta {
+        width: 10.125rem;
+        height: 45px;
+        border-radius:22px;
+        border:none;
+        background: linear-gradient(to right, $lime-green,$grayish-blue);
+        cursor:pointer;
+        color:$white;
+        font-weight:$bold;
+
+        &:hover {
+            opacity:80%;
+        }
+    }
+}
+
