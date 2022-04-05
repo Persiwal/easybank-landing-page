@@ -12,19 +12,13 @@
     }
 
     @else if $point==tablet {
-        @media (min-width: 50em) {
-            @content ;
-        }
-    }
-
-    @else if $point==phablet {
-        @media (min-width: 43.0em) {
+        @media (min-width: 56.25rem) {
             @content ;
         }
     }
 
     @else if $point==mobileonly {
-        @media (max-width: 43.0em) {
+        @media (max-width: 56.25rem) {
             @content ;
         }
 

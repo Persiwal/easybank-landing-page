@@ -4,6 +4,9 @@ html {
 
 body {
   margin: 0;
+  font-size: 18px;
+  font-family: "Public Sans", sans-serif;
+  font-weight: 300;
 }
 
 *, *::before, *::after {
@@ -31,20 +34,20 @@ ul {
   align-items: center;
 }
 
-@media (max-width: 43em) {
+@media (max-width: 56.25rem) {
   .hide-for-mobile {
     display: none;
   }
 }
 
-@media (min-width: 43em) {
+@media (min-width: 56.25rem) {
   .hide-for-desktop {
     display: none;
   }
 }
 
 .header nav {
-  padding: 1.5rem;
+  padding: 1.0625rem 1.5rem;
 }
 .header__hamburger {
   cursor: pointer;
@@ -54,26 +57,52 @@ ul {
   width: 1.5rem;
   height: 0.125rem;
   background-color: hsl(233deg, 26%, 24%);
+  transition: opacity ease-in-out 0.2s, transform ease-in-out 0.3s;
+  transform-origin: 2px 1px;
 }
 .header__hamburger span:not(:last-child) {
   margin-bottom: 0.3125rem;
+}
+.header__hamburger.open > span:first-child {
+  transform: rotate(45deg);
+}
+.header__hamburger.open > span:nth-child(2) {
+  opacity: 0;
+}
+.header__hamburger.open > span:last-child {
+  transform: rotate(-45deg);
+}
+.header__links {
+  padding: 0;
+}
+.header__links li a {
+  color: hsl(233deg, 8%, 62%);
+  transition: color ease-in-out 0.3s;
+}
+.header__links li a:hover {
+  color: hsl(233deg, 26%, 24%);
+}
+.header__links li::after {
+  position: relative;
+  top: 2rem;
+  content: "";
+  display: block;
+  width: inherit;
+  height: 0.3125rem;
+  background: linear-gradient(to right, hsl(136deg, 65%, 51%), hsl(233deg, 8%, 62%));
+  opacity: 0%;
+  transition: opacity ease-in-out 0.3s;
 }
 .header__links li:not(:last-child) {
   margin-right: 2rem;
 }
 .header__links li:hover::after {
-  position: relative;
-  top: 32px;
-  content: "";
-  display: block;
-  width: inherit;
-  height: 0.25rem;
-  background: linear-gradient(to right, hsl(136deg, 65%, 51%), hsl(233deg, 8%, 62%));
+  opacity: 100%;
 }
 .header__cta {
   width: 10.125rem;
-  height: 45px;
-  border-radius: 22px;
+  height: 2.8125rem;
+  border-radius: 1.375rem;
   border: none;
   background: linear-gradient(to right, hsl(136deg, 65%, 51%), hsl(233deg, 8%, 62%));
   cursor: pointer;

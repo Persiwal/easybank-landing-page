@@ -5,6 +5,8 @@ html {
 body {
     margin:0;
     font-size:18px;
+    font-family: 'Public Sans',sans-serif;
+    font-weight:$light;
 }
 
 *, *::before,*::after {
@@ -44,7 +46,7 @@ ul {
 }
 
 .hide-for-desktop {
-    @include breakpoint(phablet) {
+    @include breakpoint(tablet) {
         display:none;
     }
 }
