@@ -7,6 +7,10 @@ body {
     font-size:18px;
     font-family: 'Public Sans',sans-serif;
     font-weight:$light;
+
+    &.no-scroll {
+        overflow: hidden;
+    }
 }
 
 *, *::before,*::after {
@@ -36,6 +40,15 @@ ul {
     &-ai-c {
         align-items: center;
     }
+    &-fd-c {
+        flex-direction: column;
+    }
+}
+
+
+//spacing 
+.container {
+    padding: 0 1.5rem;
 }
 
 

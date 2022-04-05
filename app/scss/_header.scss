@@ -1,11 +1,41 @@
 .header {
 
+    // hamburger open styles
+    &.open {
+
+        .overlay {
+            animation: fade-in 0.3s ease-in-out forwards;
+        }
+        
+        .header__hamburger {
+
+            >span:first-child {
+            transform: rotate(45deg);
+             }
+    
+            >span:nth-child(2) {
+            opacity: 0;
+            }
+    
+            >span:last-child {
+            transform: rotate(-45deg);
+            }
+        }
+
+        .header__menu {
+            visibility:visible;
+        }
+    }
 
     nav {
-       padding: 1.0625rem 1.5rem;
+        position:relative;
+        background-color: $white;
+        padding-top: 1.0625rem;
+        padding-bottom: 1.0625rem;
     }
 
     &__hamburger {
+
         cursor:pointer;
         
         span {
@@ -22,24 +52,12 @@
             }
         }
 
-        &.open {
-
-            > span:first-child {
-                transform: rotate(45deg);
-            }
-
-            > span:nth-child(2) {
-                opacity: 0;
-            }
-
-            > span:last-child {
-                transform: rotate(-45deg);
-            }
-        }
     }
 
     &__links {
+
         padding:0;
+
         li {
 
             a {
@@ -76,6 +94,7 @@
     }      
              
     &__cta {
+
         width: 10.125rem;
         height: 2.8125rem;
         border-radius:1.375rem;
@@ -89,5 +108,31 @@
             opacity:80%;
         }
     }
+    &__menu {
+        position:fixed;
+        visibility: hidden;
+        background: $white;
+        padding: 2.1875rem;
+        //width:20.375rem;
+        top:5.5rem;
+        border-radius:.1875rem;
+        left:50%;
+        transform: translateX(-50%);
+        width: calc(100% - 3rem);
+
+        a {
+        height:2.25rem;
+        color:$dark-blue;
+        }
+    }
+}
+
+.overlay {
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient($dark-blue, transparent);
 }
 
