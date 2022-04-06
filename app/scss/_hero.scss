@@ -1,0 +1,58 @@
+.hero {
+
+    @include breakpoint(tablet) {
+        display:flex;
+        flex-direction: row-reverse;
+        align-items:center;
+    }
+
+    &__image {
+        position:relative;
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height:17.5rem;
+        margin-bottom: 1.5rem;
+
+        @include breakpoint(tablet) {
+            flex: 3;
+            height: 41rem;
+            background-image: url('/images/bg-intro-desktop.svg');
+            background-position: left center;
+        }
+
+        &::before { // phones background
+            content: '';
+            height:100%;
+            width:100%;
+            position:absolute;
+            background-image: url('/images/image-mockups.png');
+            background-size:93%;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            top:10%;
+        }
+    }
+
+    &__text {
+        text-align: center;
+
+        @include breakpoint(tablet) {
+            flex:2;
+            text-align:left;
+        }
+
+        h1 {
+            font-weight:$light;
+            font-size:1.875rem;
+            color:$dark-blue;
+            margin-bottom:1.5rem;
+        }
+
+        p {
+            line-height: 1.5;
+            font-size:.875rem;
+            margin-bottom:2.3125rem;
+        }
+    }
+}

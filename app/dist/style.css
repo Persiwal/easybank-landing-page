@@ -93,6 +93,8 @@ ul {
 
 .container {
   padding: 0 1.5rem;
+  max-width: 69.5625rem;
+  margin: auto;
 }
 
 @media (max-width: 56.25rem) {
@@ -105,6 +107,24 @@ ul {
   .hide-for-desktop {
     display: none;
   }
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+}
+
+button {
+  width: 10.125rem;
+  height: 2.8125rem;
+  border-radius: 1.375rem;
+  border: none;
+  background: linear-gradient(to right, hsl(136deg, 65%, 51%), hsl(233deg, 8%, 62%));
+  cursor: pointer;
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 700;
+}
+button:hover {
+  opacity: 80%;
 }
 
 .header.open .overlay {
@@ -122,6 +142,7 @@ ul {
 }
 .header.open .header__menu {
   visibility: visible;
+  z-index: 1;
 }
 .header nav {
   position: relative;
@@ -170,19 +191,6 @@ ul {
 .header__links li:hover::after {
   opacity: 100%;
 }
-.header__cta {
-  width: 10.125rem;
-  height: 2.8125rem;
-  border-radius: 1.375rem;
-  border: none;
-  background: linear-gradient(to right, hsl(136deg, 65%, 51%), hsl(233deg, 8%, 62%));
-  cursor: pointer;
-  color: hsl(0deg, 0%, 100%);
-  font-weight: 700;
-}
-.header__cta:hover {
-  opacity: 80%;
-}
 .header__menu {
   position: fixed;
   visibility: hidden;
@@ -206,4 +214,59 @@ ul {
   right: 0;
   bottom: 0;
   background-image: linear-gradient(hsl(233deg, 26%, 24%), transparent);
+}
+
+@media (min-width: 56.25rem) {
+  .hero {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+}
+.hero__image {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 17.5rem;
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 56.25rem) {
+  .hero__image {
+    flex: 3;
+    height: 41rem;
+    background-image: url("/images/bg-intro-desktop.svg");
+    background-position: left center;
+  }
+}
+.hero__image::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-image: url("/images/image-mockups.png");
+  background-size: 93%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  top: 10%;
+}
+.hero__text {
+  text-align: center;
+}
+@media (min-width: 56.25rem) {
+  .hero__text {
+    flex: 2;
+    text-align: left;
+  }
+}
+.hero__text h1 {
+  font-weight: 300;
+  font-size: 1.875rem;
+  color: hsl(233deg, 26%, 24%);
+  margin-bottom: 1.5rem;
+}
+.hero__text p {
+  line-height: 1.5;
+  font-size: 0.875rem;
+  margin-bottom: 2.3125rem;
 }/*# sourceMappingURL=style.css.map */
