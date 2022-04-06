@@ -4,7 +4,7 @@
     &.open {
 
         .overlay {
-            animation: fade-in 0.3s ease-in-out forwards;
+            animation: fade-in 0.2s ease-in-out forwards;
         }
         
         .header__hamburger {
@@ -44,7 +44,7 @@
             height: .125rem;
             background-color: $dark-blue;
             transition: opacity ease-in-out 0.2s,
-            transform ease-in-out 0.3s;
+            transform ease-in-out 0.2s;
             transform-origin: 2px 1px;
             
             &:not(:last-child) {
@@ -62,7 +62,7 @@
 
             a {
                 color:$grayish-blue;
-                transition: color ease-in-out 0.3s;
+                transition: color ease-in-out 0.2s;
                 &:hover {
                     color:$dark-blue;
                 }
@@ -77,7 +77,7 @@
                 height: .3125rem;
                 background: linear-gradient(to right, $lime-green, $grayish-blue);
                 opacity: 0%;
-                transition: opacity ease-in-out 0.3s;
+                transition: opacity ease-in-out 0.2s;
             }
 
             &:not(:last-child) {

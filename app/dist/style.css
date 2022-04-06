@@ -45,8 +45,8 @@
   }
 }
 .fade-out {
-  -webkit-animation: fade-out 0.3s ease-in-out forwards;
-          animation: fade-out 0.3s ease-in-out forwards;
+  -webkit-animation: fade-out 0.2s ease-in-out forwards;
+          animation: fade-out 0.2s ease-in-out forwards;
 }
 
 html {
@@ -108,8 +108,8 @@ ul {
 }
 
 .header.open .overlay {
-  -webkit-animation: fade-in 0.3s ease-in-out forwards;
-          animation: fade-in 0.3s ease-in-out forwards;
+  -webkit-animation: fade-in 0.2s ease-in-out forwards;
+          animation: fade-in 0.2s ease-in-out forwards;
 }
 .header.open .header__hamburger > span:first-child {
   transform: rotate(45deg);
@@ -137,7 +137,7 @@ ul {
   width: 1.5rem;
   height: 0.125rem;
   background-color: hsl(233deg, 26%, 24%);
-  transition: opacity ease-in-out 0.2s, transform ease-in-out 0.3s;
+  transition: opacity ease-in-out 0.2s, transform ease-in-out 0.2s;
   transform-origin: 2px 1px;
 }
 .header__hamburger span:not(:last-child) {
@@ -148,7 +148,7 @@ ul {
 }
 .header__links li a {
   color: hsl(233deg, 8%, 62%);
-  transition: color ease-in-out 0.3s;
+  transition: color ease-in-out 0.2s;
 }
 .header__links li a:hover {
   color: hsl(233deg, 26%, 24%);
@@ -162,7 +162,7 @@ ul {
   height: 0.3125rem;
   background: linear-gradient(to right, hsl(136deg, 65%, 51%), hsl(233deg, 8%, 62%));
   opacity: 0%;
-  transition: opacity ease-in-out 0.3s;
+  transition: opacity ease-in-out 0.2s;
 }
 .header__links li:not(:last-child) {
   margin-right: 2rem;
