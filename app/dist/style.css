@@ -92,9 +92,31 @@ ul {
 }
 
 .container {
-  padding: 0 1.5rem;
   max-width: 69.5625rem;
-  margin: auto;
+  margin: 0 auto;
+}
+.container--pall {
+  padding: 2.25rem 1.5rem;
+}
+.container--py {
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
+}
+.container--px {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+.container--pt {
+  padding-top: 2.25rem;
+}
+.container--pr {
+  padding-right: 1.5rem;
+}
+.container--pb {
+  padding-bottom: 2.25rem;
+}
+.container--pl {
+  padding-left: 1.5rem;
 }
 
 @media (max-width: 56.25rem) {
@@ -216,8 +238,11 @@ button:hover {
   background-image: linear-gradient(hsl(233deg, 26%, 24%), transparent);
 }
 
+.hero {
+  background-color: hsl(0deg, 0%, 98%);
+}
 @media (min-width: 56.25rem) {
-  .hero {
+  .hero .container {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -229,17 +254,34 @@ button:hover {
   background-repeat: no-repeat;
   background-position: center center;
   min-height: 17.5rem;
-  margin-bottom: 1.5rem;
 }
 @media (min-width: 56.25rem) {
   .hero__image {
     flex: 3;
     height: 41rem;
-    background-image: url("/images/bg-intro-desktop.svg");
-    background-position: left center;
   }
 }
 .hero__image::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-image: url("/images/bg-intro-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center;
+}
+@media (min-width: 56.25rem) {
+  .hero__image::before {
+    height: 100%;
+    width: 150%;
+    position: absolute;
+    background-image: url(/images/bg-intro-desktop.svg);
+    background-size: 124%;
+    background-position: 0% 77%;
+  }
+}
+.hero__image::after {
   content: "";
   height: 100%;
   width: 100%;
@@ -248,7 +290,14 @@ button:hover {
   background-size: 93%;
   background-repeat: no-repeat;
   background-position: center bottom;
-  top: 10%;
+}
+@media (min-width: 56.25rem) {
+  .hero__image::after {
+    height: 122%;
+    width: 131%;
+    background-size: 90%;
+    left: 18%;
+  }
 }
 .hero__text {
   text-align: center;
@@ -265,8 +314,18 @@ button:hover {
   color: hsl(233deg, 26%, 24%);
   margin-bottom: 1.5rem;
 }
+@media (min-width: 56.25rem) {
+  .hero__text h1 {
+    font-size: 3.25rem;
+  }
+}
 .hero__text p {
   line-height: 1.5;
   font-size: 0.875rem;
   margin-bottom: 2.3125rem;
+}
+@media (min-width: 56.25rem) {
+  .hero__text p {
+    font-size: 1.25rem;
+  }
 }/*# sourceMappingURL=style.css.map */
