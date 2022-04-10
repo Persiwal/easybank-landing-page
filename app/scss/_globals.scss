@@ -82,10 +82,13 @@ ul {
     @include breakpoint(mobileonly) {
         display:none;
     }
+    @include breakpoint(tablet) {
+        display:none;
+    }
 }
 
 .hide-for-desktop {
-    @include breakpoint(tablet) {
+    @include breakpoint(laptop) {
         display:none;
     }
 }
@@ -108,5 +111,11 @@ button {
     
     &:hover {
         opacity: 80%;
+    }
+}
+
+p {
+    @include breakpoint(mobileonly) {
+        font-size:.875rem;
     }
 }
