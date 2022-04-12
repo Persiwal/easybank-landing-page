@@ -5,21 +5,24 @@
     p {
         color:$grayish-blue;
         line-height:1.5;
+        max-width:38.3125rem;
+        margin:0 auto;
+        text-align: center;
 
-        @include breakpoint(desktop) {
+        @include breakpoint(laptop) {
             text-align: left;
-            width:50%;
+            margin:0;
         }
     }
 
     h2, &__title {
         text-align: center;
-        margin-bottom: 1.5625rem;
-        font-weight: $light;
+        margin-bottom: 1.5rem;
 
-        @include breakpoint(desktop) {
+        @include breakpoint(laptop) {
             text-align: left;
         }
+      
     }
 
     &__grid {
@@ -42,9 +45,11 @@
 
         @include breakpoint(tablet) {
             flex:0 0 50%;
+            align-items: flex-start;
         }
 
         @include breakpoint(desktop) {
+            align-items:flex-start;
             flex: 1;
         }
 
@@ -56,6 +61,7 @@
             color:$grayish-blue;
             line-height:1.5;
             text-align:left;
+            font-size:.875rem;
             
             @include breakpoint(mobileonly) {
                 font-size:14px;

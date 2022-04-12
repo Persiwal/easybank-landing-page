@@ -11,6 +11,12 @@
         }
     }
 
+    @else if $point==tabletUP {
+        @media (max-width:64rem) {
+            @content ;
+        }
+    }
+
     @else if $point==tablet {
         @media (min-width: 43.75rem) {
             @content ;

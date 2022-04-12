@@ -11,7 +11,7 @@ hamburger.addEventListener('click', () => {
 
 
 window.addEventListener('resize', () => {
-    if(window.innerWidth > 899) {
+    if(window.innerWidth > 1022) {
         header.classList.remove('open'); // toggle hamburger menu
         overlay.classList.add('fade-out');
         body.classList.remove('no-scroll');

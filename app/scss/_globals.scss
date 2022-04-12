@@ -82,7 +82,7 @@ ul {
     @include breakpoint(mobileonly) {
         display:none;
     }
-    @include breakpoint(tablet) {
+    @include breakpoint(tabletUP) {
         display:none;
     }
 }
@@ -95,7 +95,21 @@ ul {
 
 
 h1, h2 ,h3 {
-    margin-top:0 ;
+    margin-top:0;
+    font-weight: $light;
+    margin-bottom: 1.5625rem;
+    color:$dark-blue;
+}
+
+h1 {
+    font-weight: $light;
+    font-size: 1.875rem;
+    color: $dark-blue;
+    margin-bottom: 1.5rem;
+
+    @include breakpoint(laptop) {
+        font-size: 3.25rem;
+    }
 }
 
 button {
