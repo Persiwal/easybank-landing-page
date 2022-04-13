@@ -7,6 +7,7 @@ body {
     font-size:18px;
     font-family: 'Public Sans',sans-serif;
     font-weight:$light;
+    overflow-x:hidden;
 
     &.no-scroll {
         overflow: hidden;
