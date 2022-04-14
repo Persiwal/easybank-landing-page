@@ -1,0 +1,33 @@
+.footer {
+    background-color: $dark-blue;
+
+    &__logo {
+        margin-bottom:1.875rem;
+    }
+
+    &__social {
+        gap:.9375rem;
+        margin-bottom: 35px;
+    }
+
+    &__links {
+        margin-bottom:35px;
+        
+        a {
+            color:$grayish-blue;
+            font-size:13px;
+            text-align: center;
+            &:not(:last-child) {
+                margin-bottom:1.25rem;
+            }
+        }
+    }
+
+    &__cta {
+        margin-bottom:30px;
+    }
+
+    p {
+        color:$grayish-blue;
+    }
+}

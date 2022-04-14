@@ -301,7 +301,7 @@ button:hover {
 @media (min-width: 64rem) {
   .hero__image::before {
     height: 100%;
-    width: 161%;
+    width: 165%;
     position: absolute;
     background-image: url("/images/bg-intro-desktop.svg");
     background-size: 124%;
@@ -472,4 +472,32 @@ button:hover {
 .articles .article__description {
   color: hsl(233deg, 8%, 62%);
   font-size: 0.875rem;
+}
+
+.footer {
+  background-color: hsl(233deg, 26%, 24%);
+}
+.footer__logo {
+  margin-bottom: 1.875rem;
+}
+.footer__social {
+  gap: 0.9375rem;
+  margin-bottom: 35px;
+}
+.footer__links {
+  margin-bottom: 35px;
+}
+.footer__links a {
+  color: hsl(233deg, 8%, 62%);
+  font-size: 13px;
+  text-align: center;
+}
+.footer__links a:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+.footer__cta {
+  margin-bottom: 30px;
+}
+.footer p {
+  color: hsl(233deg, 8%, 62%);
 }/*# sourceMappingURL=style.css.map */
