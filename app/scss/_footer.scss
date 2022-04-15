@@ -1,33 +1,119 @@
 .footer {
     background-color: $dark-blue;
 
+    .container {
+        text-align: center;
+
+        @include breakpoint(tablet) {
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 2fr;
+        grid-template-rows: 1fr auto;
+        grid-template-areas: 
+        "logo links1 links2 cta"
+        "social links1 links2 copyright";
+        justify-items: end;
+    }
+
+    }
+
     &__logo {
+        display:inline-block;
         margin-bottom:1.875rem;
+
+        @include breakpoint(tablet) {
+            grid-area: logo;
+            justify-self: start;
+            margin-bottom:0;
+
+        }
     }
 
     &__social {
-        gap:.9375rem;
-        margin-bottom: 35px;
+        margin-bottom: 2.1875rem;
+
+        a {
+            &:not(:last-child) {
+             margin-right: .9375rem;
+            }
+
+            svg path {
+                transition: fill 0.1s ease-in-out;
+            }
+
+            &:hover svg path {
+                fill:$lime-green;
+            }
+        }
+    
+
+        @include breakpoint(tablet) {
+            grid-area: social;
+            justify-self: start;
+            margin-bottom:0;
+            align-self:end;
+        }
     }
 
     &__links {
-        margin-bottom:35px;
-        
+
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include breakpoint(tablet) {
+            align-items: flex-start;
+        }
+
         a {
-            color:$grayish-blue;
-            font-size:13px;
-            text-align: center;
-            &:not(:last-child) {
-                margin-bottom:1.25rem;
+            color:$white;
+            font-size:.75rem;
+            line-height:1.875rem;
+            transition: color 0.1s ease-in-out;
+
+            &:hover {
+                color:$lime-green
             }
+
+            @include breakpoint(tablet) {
+                font-size:.875rem;
+            }
+        }
+
+        &.col1 {
+
+
+            @include breakpoint(tablet) {
+                grid-area: links1;
+        }
+        }
+
+        &.col2 {
+            margin-bottom:2.1875rem;
+
+            @include breakpoint(tablet) {
+                  grid-area: links2;
+                  margin-bottom: 0;
+        }
         }
     }
 
     &__cta {
-        margin-bottom:30px;
+        display:inline-block;
+        margin-bottom:1.875rem;
+
+        @include breakpoint(tablet) {
+                  grid-area: cta;
+                  margin-bottom:0;
+        }
     }
 
     p {
         color:$grayish-blue;
+        margin:0;
+
+        @include breakpoint(tablet) {
+                  grid-area: copyright;
+                  align-self: end;
+        }
     }
 }

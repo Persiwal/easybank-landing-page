@@ -27,7 +27,7 @@
 
     &__grid {
 
-        margin-top:50px;
+        margin-top:3.125rem;
 
         @include breakpoint(mobileonly) {
             flex-direction: column;
@@ -64,7 +64,7 @@
             font-size:.875rem;
             
             @include breakpoint(mobileonly) {
-                font-size:14px;
+                font-size:.875rem;
                 margin-bottom:2.5rem;
                 text-align: center;
             }

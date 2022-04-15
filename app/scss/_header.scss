@@ -46,7 +46,7 @@
             background-color: $dark-blue;
             transition: opacity ease-in-out 0.2s,
             transform ease-in-out 0.2s;
-            transform-origin: 2px 1px;
+            transform-origin: .125rem .0625rem;
             
             &:not(:last-child) {
                 margin-bottom: .3125rem;
